@@ -17,6 +17,12 @@ T SimpleList<T>::at(int index) const {
     if (index < 0 || index >= numElements) {
         throw InvalidIndexException();
     }
+    if (!elements[index]) {
+        throw InvalidIndexException();
+    }
+    if (!elements) {
+        throw InvalidIndexException();
+    }
     return elements[index];
 }
 
