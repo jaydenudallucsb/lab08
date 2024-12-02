@@ -64,6 +64,7 @@ void SimpleList<T>::remove(int index) {
         throw InvalidIndexException();
     }
     for (int i = index; i < numElements-1; i++) {
+        delete elements[index];
         elements[i] = elements[i+1];
     }
     numElements--;
