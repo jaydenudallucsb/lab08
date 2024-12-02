@@ -61,7 +61,7 @@ void SimpleList<T>::remove(int index) {
     if (this->empty()) {
         throw EmptyListException();
     }
-    if (index < 0 || index >= CAPACITY) {
+    if (index < 0 || index >= numElements) {
         throw InvalidIndexException();
     }
     for (int i = index; i < numElements-1; i++) {
